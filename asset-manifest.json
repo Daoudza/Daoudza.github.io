@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Daoudza.github.io/static/css/main.f017e96b.css",
+    "main.js": "/Daoudza.github.io/static/js/main.fd8ab2c4.js",
+    "index.html": "/Daoudza.github.io/index.html",
+    "main.f017e96b.css.map": "/Daoudza.github.io/static/css/main.f017e96b.css.map",
+    "main.fd8ab2c4.js.map": "/Daoudza.github.io/static/js/main.fd8ab2c4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f017e96b.css",
+    "static/js/main.fd8ab2c4.js"
+  ]
+}
