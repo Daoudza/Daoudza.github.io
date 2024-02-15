@@ -8,28 +8,24 @@ function App() {
   const [afficherDiplomes, setAfficherDiplomes] = useState(false);
   const [afficherCoordonnees, setAfficherCoordonnees] = useState(false);
   const [buttonColor, setButtonColor] = useState('#4caf50'); // Couleur par défaut
-  const fileName = 'CVDaouda_Gary';
-  const fileContent = 'CV';
+  const fileName = 'CVDaouda.pdf';
 
   const handleClickAfficherCV = () => {
     setAfficherCV(true);
     setAfficherDiplomes(false);
     setAfficherCoordonnees(false);
-    setButtonColor('Blanc'); // Remettre la couleur par défaut
   };
 
   const handleClickAfficherDiplomes = () => {
     setAfficherDiplomes(true);
     setAfficherCV(false);
     setAfficherCoordonnees(false);
-    setButtonColor('Bleu'); // Remettre la couleur par défaut
   };
 
   const handleClickAfficherCoordonnees = () => {
     setAfficherCoordonnees(true);
     setAfficherCV(false);
     setAfficherDiplomes(false);
-    setButtonColor('#FF0000'); // Remettre la couleur par défaut
   };
 
   return (
@@ -61,9 +57,13 @@ function App() {
         backgroundColor={afficherCoordonnees ? '#45a049' : buttonColor}
       />
 
+      {/* Bouton de téléchargement */}
+      <a href="/public/res/CVDaouda.pdf" download="CVDaouda.pdf">
+        <button>Voici mon CV en PDF</button>
+      </a>
+
       {/* Affichage conditionnel du CV, des diplômes ou des coordonnées */}
-      {afficherCV && <Cv fileName={fileName} fileContent={fileContent} />}
-      {/* Passe les variables fileName et fileContent au composant Cv */}
+      {afficherCV && <Cv />}
       {afficherDiplomes && (
         <div>
           {/* Contenu des diplômes */}
