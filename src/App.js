@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Button from './Button.js';
 import Cv from './Cv';
+import ContactForm from './ContactForm';
 
 function App() {
   const [afficherCV, setAfficherCV] = useState(false);
@@ -9,6 +10,7 @@ function App() {
   const [afficherCoordonnees, setAfficherCoordonnees] = useState(false);
   const [buttonColor, setButtonColor] = useState('#4caf50'); // Couleur par défaut
   const fileName = 'CVDaouda.pdf';
+  
 
   const handleClickAfficherCV = () => {
     setAfficherCV(true);
@@ -28,11 +30,12 @@ function App() {
     setAfficherDiplomes(false);
   };
 
+
   return (
     <div style={{ textAlign: 'center', padding: '20px' }}>
       <h1>Bonjour je m'appelle Daouda, vous êtes sur mon site qui vous permet d'accéder à mon cv et autres informations à mon sujet. </h1>
 
-      {/* Bouton pour afficher le CV */}
+      
       <Button
         text=" CV"
         onClick={handleClickAfficherCV}
@@ -41,7 +44,6 @@ function App() {
 
       {' '}
 
-      {/* Bouton pour afficher les diplômes */}
       <Button
         text=" Diplômes"
         onClick={handleClickAfficherDiplomes}
@@ -50,36 +52,30 @@ function App() {
 
       {' '}
 
-      {/* Bouton pour afficher les coordonnées */}
       <Button
         text=" Coordonnées"
         onClick={handleClickAfficherCoordonnees}
         backgroundColor={afficherCoordonnees ? '#45a049' : buttonColor}
       />
 
-      {/* Bouton de téléchargement */}
       <a href="/public/res/CVDaouda.pdf" download="CVDaouda.pdf">
         <button>Voici mon CV en PDF</button>
       </a>
 
-      {/* Affichage conditionnel du CV, des diplômes ou des coordonnées */}
       {afficherCV && <Cv />}
       {afficherDiplomes && (
         <div>
-          {/* Contenu des diplômes */}
           <h2>Mes Diplômes</h2>
           <p>Brevet Mention Assez Bien</p>
           <p>ASSR2</p>
-          {/* Ajoute d'autres diplômes si nécessaire */}
         </div>
       )}
       {afficherCoordonnees && (
         <div>
-          {/* Contenu des coordonnées */}
           <h2>Mes Coordonnées</h2>
           <p>Email: daoudagary92@gmail.com</p>
           <p>Téléphone Portable: 06 14 17 68 83</p>
-          {/* Ajoute d'autres coordonnées si nécessaire */}
+          <ContactForm />
         </div>
       )}
     </div>
