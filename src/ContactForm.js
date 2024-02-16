@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function ContactForm() {
     const [state, setState] = useState({
-        name: '',
+        Nom: '',
         email: '',
         subject: '',
         message: '',
@@ -40,6 +40,7 @@ function ContactForm() {
             <label>Nom</label>
             <input type="text" name="name" value={state.name} onChange={handleChange} />
 
+        
             <label>Email</label>
             <input type="email" name="email" value={state.email} onChange={handleChange} />
 

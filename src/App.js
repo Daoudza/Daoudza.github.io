@@ -8,7 +8,7 @@ function App() {
   const [afficherCV, setAfficherCV] = useState(false);
   const [afficherDiplomes, setAfficherDiplomes] = useState(false);
   const [afficherCoordonnees, setAfficherCoordonnees] = useState(false);
-  const [buttonColor, setButtonColor] = useState('#4caf50'); // Couleur par défaut
+  const [buttonColor, setButtonColor] = useState('#4caf50');
   const fileName = 'CVDaouda.pdf';
   
 
